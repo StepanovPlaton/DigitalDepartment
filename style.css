@@ -1,0 +1,107 @@
+/* Стили для корня страницы */
+/* Объявляем некоторые переменные-константы */
+:root {
+    --color-bg0: #EFF2FD80;
+    --color-bg1: #EFF2FD;
+
+    --color-fg0: #000925;
+
+    --color-ac0: #49B3F7;
+    --color-ac1: #864FF1;
+
+    --color-err: #dc322f;
+
+    --color-whatsapp: #69D17F;
+    --color-telegram: #559ED7;
+
+    --app-width: 550px;
+    --icon-size: 50px;
+
+    background-color: var(--color-bg0);
+    color: var(--color-fg0);
+}
+
+/* Переносим стили из атрибута style */
+/* Добавляем отступы, позиционируем по-центру */
+/* Устанавливаем максимальную ширину равной значению переменной --app-width*/
+body {
+    margin: auto;
+    padding: 0 20px;
+    max-width: var(--app-width);
+}
+
+/* Добавляем разделитель под блоком about */
+.about {
+    border-bottom: 2px solid var(--color-ac0);
+}
+
+/* Переносим стили из атрибута style */
+/* Устанавливаем размер и скругление */
+/* Позиционирование - по кравому краю родителя с обтеканием контента */
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    float: right;
+}
+
+/* Контейнер для иконок социальных сетей */
+/* Вытягиваем по всей ширине, устанавливаем высоту равной переменной --icon-size */
+/* Используем flexbox для позиционирование дочерних элементов */
+/* Элементы в строку, горизонтально по центру родителя, вертикально с равными промежутками между и сбоку */
+.social_networks {
+    width: 100%;
+    height: var(--icon-size);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+/* Общее описание иконки соцсети */
+/* Устанавливаем размеры равные переменной --icon-size */
+/* Скругление 50% - круг */
+/* Добавляем небольшую черную с альфа-каналом тень с размытием */
+/* Позиционируем иконку в контейнере */
+.social_network {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 2px #00000080);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Описание иконки с номером телефона */
+/* Устанавливаем цвет и соответствующую иконку */
+.telephone {
+    background-color: var(--color-bg1);
+    background-image: url("./icons/telephone.svg");
+}
+
+/* Описание иконки с аккаунтом whatsapp */
+/* Устанавливаем цвет и соответствующую иконку */
+.whatsapp {
+    background-color: var(--color-whatsapp);
+    background-image: url("./icons/whatsapp.svg");
+}
+
+/* Описание иконки с аккаунтом telegram */
+/* Устанавливаем цвет и соответствующую иконку */
+.telegram {
+    background-color: var(--color-telegram);
+    background-image: url("./icons/telegram.svg");
+}
+
+
+
+/* Условное медиавыражение */
+/* Работает при ширине экрана менее 750px */
+/* Переопределяя переменную --app-width */
+/* Устанавливаем ширину body во весь viewport */
+@media screen and (max-width:750px) {
+    :root {
+        --app-width: 100%;
+    }
+}

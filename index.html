@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Тип документа - HTML -->
+
+<!-- Ради разнообразия страница о себе сделана в виде резюме -->
+<!-- Добавлены комментарии к новым тегам, для демонстрации понимания материала -->
+
+<!-- Корневой элемент документа. Язык - русский -->
+<html lang="ru">
+    <!-- Контейнер метаданных о странице -->
+    <head>
+        <!-- Заголовок страницы (отображается в имени вкладки браузера) -->
+        <title>Лабораторная работа #1</title>
+
+        <!-- Тип контента - текст, html. Кодировка - utf-8 -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- Описание страницы (полезно для поддержки CEO) -->
+        <meta name="description" content="Лабораторная работа #1 - HTML" />
+        <!-- Автор контента (полезно для поддержки CEO) -->
+        <meta name="author" content="Степанов Платон, 6203-020302D" />
+    </head>
+
+    <!-- Контейнер контента страницы -->
+    <!-- max-width: 500px; устанавливает максимальную ширину блока 500px -->
+    <!-- margin: auto; автоматически устанавливает внешние отступы блока, в данном случае позиционирует блок по-центру -->
+    <body style="max-width: 500px; margin: auto;">
+        <!-- Изображение, с указанием ширины и высоты -->
+        <!-- border-radius: 20px; указывает диаметр скругления углов изображения -->
+        <!-- float: right; указывает вынимает изображение из нормального потока рендера и помещает вдоль правой стороны родителя -->
+        <img src="./avatar.jpg" width="200" height="200" style="border-radius: 20px; float: right;"/>
+
+        <!-- Заголовок первого уровня -->
+        <h1>Степанов Платон</h1>
+        <!-- Заголовок четвертого уровня -->
+        <h4>Cтудент ИИК, ФИИТ, учебная группа - 6203-020302D, ЦК-FT-91</h4>
+
+        <!-- Параграф текста -->
+        <p>
+            <!-- <b> - жирный шрифт -->
+            <!-- <br> - перенос строки -->
+            <b>Занятость:</b> полная занятость, частичная занятость, проектная работа, стажировка<br/>
+            <!-- <i> - курсив -->
+            <b>График работы:</b> сменный график, гибкий график, <i>удаленная работа</i><br/>
+            <b><i>Не готов к командировкам</i></b><br/>
+        </p>
+
+        <!-- Заголовок второго уровня -->
+        <h2>Мои pet-проекты:</h2>
+        <!-- Ненумерованный список -->
+        <ul>
+            <!-- Элемент списка -->
+            <li>
+                <b>JellyBelly Wiki</b>, 2024<br/>
+                <!-- Ссылка (в данном случае ссылка и отображаемый текст совпадают, но вобщем случае это не обязательно) -->
+                <a href="https://github.com/StepanovPlaton/jelly_belly_wiki">https://github.com/StepanovPlaton/jelly_belly_wiki</a><br/>
+                <a href="https://jelly-belly-wiki.vercel.app">https://jelly-belly-wiki.vercel.app</a><br/>
+                <p>
+                    <b>JellyBelly Wiki</b> - тестовое задание перед собеседованием. Написано за 10 часов. Сайт о бобах JellyBelly, основанный на открытом API<br/>
+                    <b>Стек:</b> TypeScript, React 18, Next.js 14 (App Router), Tailwind CSS, Zod
+                </p>
+            </li>
+            <li>
+                <b>.Torrent</b>, 2024 (в разработке)<br/>
+                <a href="https://github.com/StepanovPlaton/torrent_frontend">https://github.com/StepanovPlaton/torrent_frontend</a><br/>
+                <a href="https://github.com/StepanovPlaton/torrent_backend">https://github.com/StepanovPlaton/torrent_backend</a><br/>
+                <p>
+                    <b>.Torrent</b> - SSR Web-приложение для обмена .torrent файлами.<br/>
+                    <b>Frontend:</b> TypeScript, React 18, Next.js 14 (App Router), Zod, SWR, Tailwind CSS<br/>
+                    <b>Backend:</b> Python, FastAPI, SQLAlchemy, ORM, Typer, asyncio<br/>
+                    Запуск в Docker, nginx в качестве reverse proxy.
+                </p>
+            </li>
+            <li>
+                <b>NeyroGamer</b> (Python, Machine Learning), 2020<br/>
+                <a href="http://karandashsamodelkin.blogspot.com/2020/07/neyrogamer-2.html">http://karandashsamodelkin.blogspot.com/2020/07/neyrogamer-2.html</a><br/>
+                <a href="https://github.com/StepanovPlaton/NeyroGamer">https://github.com/StepanovPlaton/NeyroGamer</a><br/>
+                <p>
+                    Обучение нейронной сети игре в гонки на эмуляторе Sega Genesis. <br/>
+                    Используется генетический алгоритм для обучения нейронных сетей. <br/>
+                    Написано без ML-библиотек, всё своими руками.
+                </p>
+            </li>
+        </ul>
+        
+    </body>
+</html>

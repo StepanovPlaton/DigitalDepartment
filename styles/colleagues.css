@@ -1,0 +1,26 @@
+.colleagues_table {
+    width: 100%;
+    border: solid 1px var(--color-fg0);
+    border-collapse: collapse;
+    border-radius: 8px;
+}
+
+
+tr {
+    border-bottom: solid 1px var(--color-fg0);
+}
+tr:nth-child(1) {
+    border-bottom: solid 2px var(--color-fg0);
+}
+td, th {
+    padding: 5px;
+    border: solid 1px var(--color-fg0);
+}
+td:last-child a {
+    display: block;
+    margin-left: 18px;
+}
+
+tr:nth-child(2n) {
+    background-color: var(--color-ac0-background);
+}

@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 
-<!-- Развитие идеи страницы-резюме из лабораторной работы #1 -->
-
-<!-- Вместо двух карточек по двум сторонам экрана владение flexbox -->
-<!-- продемонстрированно на иконках социальных сетей -->
+<!-- Развитие идеи страницы-резюме из прошлых лабораторных работ -->
 
 <html lang="ru">
     <head>
-        <title>Лабораторная работа #2</title>
+        <title>Лабораторная работа #3</title>
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Лабораторная работа #2 - HTML" />
+        <meta name="description" content="Лабораторная работа #3" />
         <meta name="author" content="Степанов Платон, 6203-020302D" />
 
-        <!-- Подключаем файл стилей -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/general.css">
+        <link rel="stylesheet" href="./styles/index.css">
     </head>
 
     <body>
-        <!-- Базовый тег контейнер -->
+        <header class="header">
+            <img class="header_icon" src="./images/avatar.jpg" />
+            <div class="pages_links">
+                <a class="page_link" href="./index.html">Обо мне</a>
+                <a class="page_link" href="./pages/skills.html">Навыки</a>
+            </div>
+        </header>
+
         <div class="about">
-            <img class="avatar" src="./avatar.jpg" />
+            <img class="avatar" src="./images/avatar.jpg" />
 
             <h1>Степанов Платон</h1>
             <h4>Cтудент ИИК, ФИИТ, учебная группа - 6203-020302D, ЦК-FT-91</h4>

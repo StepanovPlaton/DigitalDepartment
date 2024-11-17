@@ -1,0 +1,50 @@
+:root {
+    --color-bg0: #EFF2FD80;
+    --color-bg1: #EFF2FD;
+
+    --color-fg0: #000925;
+
+    --color-ac0: #49B3F7;
+    --color-ac1: #864FF1;
+    --color-ac1-background: #864FF130;
+
+    --color-err: #dc322f;
+
+    --color-whatsapp: #69D17F;
+    --color-telegram: #559ED7;
+
+    --app-width: 550px;
+    --icon-size: 50px;
+
+    background-color: var(--color-bg0);
+    color: var(--color-fg0);
+}
+
+body {
+    margin: auto;
+    padding: 0 20px;
+    width: 100%;
+    padding: 0 calc((100% - var(--app-width))/2);
+    margin-bottom: 10px;
+}
+
+header {
+    width: 100%;
+    padding: 0 calc((100% - var(--app-width))/2);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header_icon {
+    height: 40px;
+    border-radius: 50%;
+}
+.pages_links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.page_link {
+    color: var(--color-ac1);
+}

@@ -1,0 +1,15 @@
+body {
+    margin-top: 62px;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #49B3F7 !important;
+    padding-left: 20px;
+}
+
+.navbar-brand,
+.nav-link {
+    font-size: 1.25rem;
+    /* Увеличенный размер текста */
+}

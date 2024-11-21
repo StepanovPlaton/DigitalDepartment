@@ -1,0 +1,33 @@
+body {
+    margin-top: 62px;
+    margin-left: 264px;
+    padding: 20px;
+}
+
+
+.sidebar {
+    background-color: #49B3F740;
+    padding: 20px;
+    height: 100vh;
+    margin-top: 62px;
+}
+
+.sidebar .nav-link {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #49B3F780;
+}
+
+.image_wrapper {
+    width: 100%;
+    max-height: 800px;
+}
+
+.image_wrapper .image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

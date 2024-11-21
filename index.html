@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <title>Лабораторная работа #6</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Лабораторная работа #6" />
+    <meta name="author" content="Степанов Платон, 6203-020302D" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">Эмилия Кларк</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Основная информация</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pages/films.html">Список фильмов</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar fixed-top">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#images">Фотографии</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#films">Фильмы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#bio">Биография</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Основное содержимое -->
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10" id="images">
+          <div class="content">
+            <div
+              id="carouselExample"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="image_wrapper">
+                    <img src="./images/1.jpg" class="image" alt="Slide 1" />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="image_wrapper">
+                    <img src="./images/2.jpg" class="image" alt="Slide 2" />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="image_wrapper">
+                    <img src="./images/3.webp" class="image" alt="Slide 3" />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="image_wrapper">
+                    <img src="./images/4.jpg" class="image" alt="Slide 4" />
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExample"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"></span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExample"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"></span>
+              </a>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="container mt-5" id="films">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="./images/7.png" class="card-img-top" alt="Movie 1" />
+            <div class="card-body">
+              <h5 class="card-title">Терминатор: Генезис</h5>
+              <p class="card-text">
+                «Термина́тор: Генезис» — фантастический боевик режиссёра Алана
+                Тейлора. Роли исполняют Арнольд Шварценеггер, Эмилия Кларк,
+                Джейсон Кларк и Джай Кортни. Пятый кинофильм из серии
+                «Терминатор». Премьера в России состоялась 2 июля 2015 года в
+                формате RealD 3D и IMAX 3D.
+              </p>
+              <a
+                href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjepfa27-2JAxWT1QIHHdpIL7AQFnoECEQQAQ&url=https%3A%2F%2Fwww.kinopoisk.ru%2Ffilm%2F436225%2F&usg=AOvVaw3Jz6tarVfir3XDG9ZoguDt&opi=89978449"
+                class="btn btn-primary"
+                target="_blank"
+                >Смотреть на Кинопоиск</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="./images/6.jpg" class="card-img-top" alt="Movie 2" />
+            <div class="card-body">
+              <h5 class="card-title">Игра престолов</h5>
+              <p class="card-text">
+                «Игра́ престо́лов» (англ. Game of Thrones) — американский
+                фэнтезийный драматический телесериал, созданный Дэвидом
+                Бениоффом и Д. Б. Уайссом для кабельного телеканала HBO. Основан
+                на цикле романов «Песнь льда и огня» Джорджа Р. Р. Мартина.
+              </p>
+              <a
+                href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjOnbDQ7-2JAxWfwAIHHdU9N2UQFnoECD8QAQ&url=https%3A%2F%2Fwww.kinopoisk.ru%2Fseries%2F464963%2F&usg=AOvVaw2XjmU2CcT2ELD4bnaW2gri&opi=89978449"
+                class="btn btn-primary"
+                target="_blank"
+                >Смотреть на Кинопоиск</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="./images/5.jpg" class="card-img-top" alt="Movie 3" />
+            <div class="card-body">
+              <h5 class="card-title">До встречи с тобой</h5>
+              <p class="card-text">
+                «До встречи с тобой» (англ. Me Before You) — британская
+                мелодрама режиссёра Теа Шэррок по сюжету одноимённого романа
+                Джоджо Мойес 2012 года. В фильме снимались: Эмилия Кларк, Сэм
+                Клафлин, Дженна Коулман, Чарльз Дэнс, Мэттью Льюис, Бен
+                Ллойд-Хьюз и Джанет Мактир. Фильм был выпущен на концерне
+                «Warner Bros» 2 июня 2016 года.
+              </p>
+              <a
+                href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjm58vj7-2JAxXLzgIHHeXYGF0QFnoECEIQAQ&url=https%3A%2F%2Fwww.kinopoisk.ru%2Ffilm%2F807318%2F&usg=AOvVaw16LFOv3aEXv7MgYIWVD4N0&opi=89978449"
+                class="btn btn-primary"
+                target="_blank"
+                >Смотреть на Кинопоиск</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5" id="bio">
+      <h2>Биография</h2>
+      <p>
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-toggle="collapse"
+          data-target="#actorInfo"
+          aria-expanded="false"
+          aria-controls="actorInfo"
+        >
+          Показать информацию
+        </button>
+      </p>
+      <div class="collapse" id="actorInfo">
+        <div class="card card-body">
+          <h5>Ранние годы и образование</h5>
+          <p>
+            Эмилия Изобел Юфимия Роуз Кларк[9] родилась 23 октября 1986 года, в
+            Лондоне[3][10][11][12][13] и выросла в Беркшире[14][15][16]. Её отец
+            работал звукорежиссёром в театре и был родом из Вулвергемптона,
+            Уэст-Мидлендс[17], он умер от рака 10 июля 2016 года; мать,
+            Дженнифер Кларк[18], является директором благотворительного фонда
+            «Анима»[19]. У Эмилии также есть старший брат Беннетт[20], который
+            был одним из операторов, снимавших «Игру престолов»[21]. Кларк
+            проявила интерес к актёрскому мастерству в возрасте трёх лет после
+            просмотра мюзикла «Плавучий театр[англ.]», над которым работал её
+            отец[14]. Она обучалась в школе святого Антония[англ.] и в школе
+            Сент-Эндрюс[англ.], которую окончила в 2005 году[22]. После она
+            училась в Лондонском драматическом центре[англ.], который окончила в
+            2009 году[23][24].
+          </p>
+          <h5>Карьера</h5>
+          <p>
+            Первое появление Эмилии Кларк в кино состоялось в 2009 году, в
+            студенческом короткометражном фильме «Падение собаки»[25]. Её первая
+            телевизионная роль — Саския Майер в эпизоде британского телесериала
+            «Врачи[англ.]». В 2010 году Кларк получила роль Дейенерис Таргариен
+            в фэнтези-сериале канала НВО «Игра престолов», основанного на серии
+            книг «Песнь Льда и Огня» Джорджа Р. Р. Мартина. В этом сериале она
+            заменила актрису Тамзин Мерчант[26]. В одном из интервью актриса
+            заявила, что во время своего прослушивания она исполнила танец
+            маленьких утят и танец робота[англ.][27]. Сериал дебютировал в
+            апреле 2011 года и получил положительные отзывы, а также был продлён
+            на второй сезон[28]. В 2011 году Эмилия Кларк выиграла награду «EWwy
+            Awards» в номинации «Лучшая женская роль — драма» за роль
+            Дейенерис[29]. В 2013 году Кларк была номинирована на премию «Эмми»
+            в категории «Лучшая женская роль второго плана в драматическом
+            сериале»[30]. Она была снова номинирована на премию «Эмми» в 2015,
+            2016 и 2019 годах[31]. Эмилия Кларк получила положительные отзывы от
+            критиков за свою роль в телесериале «Игра престолов». Мэтью Гилберт
+            из Boston Globe назвал её роль «завораживающей», добавив, что «у
+            Эмилии Кларк нет большого простора в плане эмоций в работе над ролью
+            Дейенерис, кроме ожесточённой решимости, — тем не менее она
+            трудолюбиво работает над ролью»[32]. Тодд Вандервиф для сайта The
+            A.V. Club прокомментировал трудность адаптации такого перехода от
+            страницы к экрану[33]. В 2017 году Эмилия Кларк стала одной из самых
+            высокооплачиваемых актрис на телевидении, зарабатывая $2 млн за один
+            эпизод «Игры престолов»[34][35]. В 2012 году Кларк появилась в
+            картине «Спайк Айленд[англ.]», фильм назван в честь британской
+            рок-группы The Stone Roses[36]. С марта по апрель 2013 года Кларк
+            играла Холли Голайтли в бродвейской постановке «Завтрак у
+            Тиффани[англ.]»[37], в том же году она снялась в фильме «Дом
+            Хемингуэй» вместе с Джудом Лоу. Реакция критиков на фильм была в
+            основном положительная, хотя он стал коммерческим провалом[38][39].
+            В мае 2014 года было объявлено, что актриса снимется в фильме «Сад
+            последних дней» вместе с Джеймсом Франко[40], но фильм был отменён
+            за две недели до начала съёмок. Эмилии Кларк предложили роль
+            Анастейши Стил в фильме «Пятьдесят оттенков серого» (2015), но она
+            отказалась от этой роли из-за обнажённых сцен[41]. Она также сыграла
+            Сару Коннор в фильме «Терминатор: Генезис» (2015) вместе с Арнольдом
+            Шварценеггером, Джаем Кортни и Джейсоном Кларком[42]. Фильм собрал в
+            прокате более $400 млн по всему миру, но не получил благоприятных
+            отзывов от критиков[43], несмотря на это она получила номинацию на
+            премию «Teen Choice Awards». В 2016 году Эмилия Кларк снялась в
+            главной женской роли вместе с Сэмом Клафлином в фильме-адаптации
+            бестселлера с одноимённым названием «До встречи с тобой», который
+            был выпущен 3 июня 2016 года[44]. Фильм имел коммерческий успех,
+            собрав более $200 млн по всему миру, и получил высокий рейтинг на
+            сайте Rotten Tomatoes[45][46]. За свою роль в этом фильме она
+            получила номинации на премии «Teen Choice Awards» и «MTV Movie
+            Awards». Кларк играла ведущую роль няни Верены в фильме «Голос из
+            камня», который был выпущен в апреле 2017 года[47][48]. В конце 2016
+            года стало известно, что Эмилия Кларк снимется в новом фильме
+            вселенной «Звёздных войн» о молодом Хане Соло[49]. В августе 2017
+            стало известно имя героини Кларк в фильме — Ки’ра[50]. Выход фильма
+            состоялся 24 мая 2018 года[51]. 29 декабря 2023 года Эмилия Кларк
+            вместе со своей матерью Дженнифер стала кавалером ордена Британской
+            империи за создание благотворительной организации SameYou,
+            занимающейся оказанием помощи людям, восстанавливающимся после
+            повреждений головного мозга[52].
+          </p>
+          <h5>Личная жизнь</h5>
+          <p>
+            С сентября 2012 года Эмилия Кларк встречалась с Сетом
+            Макфарлейном[53], в марте 2013 года было объявлено о разрыве их
+            отношений[54]. C октября 2015 года Кларк проживала в Хэмпстеде,
+            Лондон[55]. В 2016 году она приобрела дом в Венис-Бич[англ.],
+            Лос-Анджелес[56]. Эмилия Кларк была признана самой желанной женщиной
+            мира по версии журнала AskMen[англ.] в 2014 году[57]. Она также была
+            названа журналом Esquire самой красивой женщиной в мире в 2015
+            году[58]. Журнал Screen International[англ.] назвал её одной из
+            «будущих британских звёзд»[59]. 8 марта 2017 года Кларк получила
+            награду от сайта HuffPost как самый активный борец за права женщин
+            во всем мире[60]. 13 июля 2017 года в интервью журналу Rolling Stone
+            актриса рассказала о том, как роль в телесериале «Игра престолов»
+            превратила её в феминистку[61]. В статье для The New Yorker за март
+            2019 года она рассказала, что у неё было субарахноидальное
+            кровоизлияние, форма инсульта, вызванное разрывом аневризмы, в 2011
+            году. Она перенесла срочную эндоваскулярную операцию и впоследствии
+            страдала афазией, в какой-то момент она не могла вспомнить даже
+            собственное имя. У неё была вторая аневризма, которую вылечили
+            хирургически в 2013 году[1].
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

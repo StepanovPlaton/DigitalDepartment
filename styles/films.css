@@ -1,0 +1,25 @@
+.actor-info {
+    margin-bottom: 20px;
+}
+
+.actor-photo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.movie-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.table th,
+.table td {
+    text-align: center;
+}

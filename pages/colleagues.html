@@ -2,7 +2,7 @@
 
 <html lang="ru">
   <head>
-    <title>Лабораторная работа #4</title>
+    <title>Лабораторная работа #5</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="author" content="Степанов Платон, 6203-020302D" />
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/general.css" />
     <link rel="stylesheet" href="../styles/colleagues.css" />
+    <link rel="stylesheet" href="../styles/form.css" />
   </head>
 
   <body>
@@ -39,9 +40,9 @@
         <td>Оренбург</td>
         <td>МСК +2</td>
         <td>
-            <a href="https://t.me/sergey">
-                <div class="telegram social_network small"></div>
-            </a>
+          <a href="https://t.me/sergey">
+            <div class="telegram social_network small"></div>
+          </a>
         </td>
       </tr>
       <tr>
@@ -50,9 +51,9 @@
         <td>Оренбург</td>
         <td>МСК +2</td>
         <td>
-            <a href="https://t.me/vladimir">
-                <div class="telegram social_network small"></div>
-            </a>
+          <a href="https://t.me/vladimir">
+            <div class="telegram social_network small"></div>
+          </a>
         </td>
       </tr>
       <tr>
@@ -61,9 +62,9 @@
         <td>Оренбург</td>
         <td>МСК +2</td>
         <td>
-            <a href="https://t.me/artem">
-                <div class="telegram social_network small"></div>
-            </a>
+          <a href="https://t.me/artem">
+            <div class="telegram social_network small"></div>
+          </a>
         </td>
       </tr>
       <tr>
@@ -72,9 +73,9 @@
         <td>Самара</td>
         <td>МСК +1</td>
         <td>
-            <a href="https://t.me/nikolay">
-                <div class="telegram social_network small"></div>
-            </a>
+          <a href="https://t.me/nikolay">
+            <div class="telegram social_network small"></div>
+          </a>
         </td>
       </tr>
       <tr>
@@ -83,12 +84,33 @@
         <td>Москва</td>
         <td>МСК</td>
         <td>
-            <a href="https://t.me/andrey">
-                <div class="telegram social_network small"></div>
-            </a>
+          <a href="https://t.me/andrey">
+            <div class="telegram social_network small"></div>
+          </a>
         </td>
       </tr>
     </table>
+
+    <div class="form-container">
+      <form id="userForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="position">Должность:</label>
+        <input type="text" id="position" name="position" required />
+
+        <label for="city">Город:</label>
+        <input type="text" id="city" name="city" required />
+
+        <label for="timezone">Часовой пояс:</label>
+        <input type="text" id="timezone" name="timezone" required />
+
+        <label for="telegram">Ссылка на Telegram аккаунт:</label>
+        <input type="url" id="telegram" name="telegram" required />
+
+        <button type="submit">Добавить</button>
+      </form>
+    </div>
 
     <a href="../index.html" class="home_button">
       <img src="../images/icons/home.svg" />

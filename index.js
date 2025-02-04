@@ -1,75 +1,60 @@
-// --- #1 ---
-function findCommonElements(array1, array2) {
-  const set1 = new Set(array1);
-  const set2 = new Set(array2);
-  const commonElements = [...set1].filter((item) => set2.has(item));
-
-  return commonElements;
-}
-
-const array1 = [1, 2, 3, 4, 5];
-const array2 = [4, 5, 6, 7, 8];
-console.log(findCommonElements(array1, array2)); // [4, 5]
-
-// --- #2 ---
-function countOccurrences(array) {
-  const occurrencesMap = new Map();
-
-  for (const element of array) {
-    if (occurrencesMap.has(element)) {
-      occurrencesMap.set(element, occurrencesMap.get(element) + 1);
-    } else {
-      occurrencesMap.set(element, 1);
-    }
-  }
-
-  return occurrencesMap;
-}
-
-const array = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4];
-const occurrences = countOccurrences(array);
-occurrences.forEach((count, element) => {
-  console.log(`Element ${element} occurs ${count} times`);
-});
-
-// --- #3 ---
 class Student {
-  constructor(name, groupNumber) {
-    this.name = name;
-    this.groupNumber = groupNumber;
+  constructor(lastName, firstName) {
+    this.lastName = lastName;
+    this.firstName = firstName;
   }
 }
 
-function countLargestGroup(students) {
-  const groupCounts = new Map();
+function compareStudents(studentA, studentB) {
+  if (studentA.lastName < studentB.lastName) return -1;
+  if (studentA.lastName > studentB.lastName) return 1;
+  if (studentA.firstName < studentB.firstName) return -1;
+  if (studentA.firstName > studentB.firstName) return 1;
+  return 0;
+}
 
-  for (const student of students) {
-    const group = student.groupNumber;
-    if (groupCounts.has(group)) {
-      groupCounts.set(group, groupCounts.get(group) + 1);
+function binarySearch(students, target) {
+  let left = 0;
+  let right = students.length - 1;
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+    const comparison = compareStudents(students[mid], target);
+    if (comparison === 0) {
+      return mid;
+    } else if (comparison < 0) {
+      left = mid + 1;
     } else {
-      groupCounts.set(group, 1);
+      right = mid - 1;
     }
   }
-
-  let maxCount = 0;
-  for (const count of groupCounts.values()) {
-    if (count > maxCount) {
-      maxCount = count;
-    }
-  }
-
-  return maxCount;
+  return -1;
 }
 
 const students = [
-  new Student("Alice", "A1"),
-  new Student("Bob", "A1"),
-  new Student("Charlie", "B1"),
-  new Student("David", "A1"),
-  new Student("Eve", "B1"),
-  new Student("Frank", "B1"),
-  new Student("Grace", "C1"),
+  new Student("Иванов", "Иван"),
+  new Student("Петров", "Петр"),
+  new Student("Сидоров", "Сидор"),
+  new Student("Кузнецов", "Алексей"),
+  new Student("Смирнов", "Андрей"),
+  new Student("Лебедев", "Дмитрий"),
+  new Student("Новиков", "Сергей"),
 ];
 
-console.log(countLargestGroup(students)); // 3 (группа B1)
+students.sort(compareStudents);
+console.log("Отсортированный список студентов:");
+students.forEach((student, index) => {
+  console.log(`${index}: ${student.lastName} ${student.firstName}`);
+});
+
+const searchStudent = new Student("Смирнов", "Андрей");
+const index = binarySearch(students, searchStudent);
+
+if (index !== -1) {
+  console.log(
+    `\nСтудент ${searchStudent.lastName} ${searchStudent.firstName} найден на позиции ${index}.`
+  );
+} else {
+  console.log(
+    `\nСтудент ${searchStudent.lastName} ${searchStudent.firstName} не найден.`
+  );
+}

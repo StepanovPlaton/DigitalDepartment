@@ -1,27 +1,50 @@
-function isExcess(number) {
-  if (number <= 0) {
-    return false;
+// --- #1 ---
+class Figure {
+  #x;
+  #y;
+
+  constructor(x, y) {
+    this.#x = x;
+    this.#y = y;
   }
 
-  let divisorSum = 0;
-  for (let i = 1; i < number; i++) {
-    if (number % i === 0) {
-      divisorSum += i;
-    }
+  square() {
+    return undefined;
+  }
+}
+
+// --- #2 ---
+class Circle extends Figure {
+  #r;
+
+  constructor(x, y, r) {
+    super(x, y);
+    this.#r = r;
   }
 
-  return divisorSum > number;
+  square() {
+    return Math.PI * this.#r * this.#r;
+  }
 }
 
-const input = prompt("Enter a positive integer:");
-const number = parseInt(input, 10);
-if (isNaN(number) || number <= 0) {
-  console.log("Please enter a valid positive integer.");
-  return;
+// --- #3 ---
+class Rectangle extends Figure {
+  #h;
+  #w;
+
+  constructor(x, y, h, w) {
+    super(x, y);
+    this.#h = h;
+    this.#w = w;
+  }
+
+  square() {
+    return this.#h * this.#w;
+  }
 }
 
-if (isExcess(number)) {
-  console.log(`${number} is an excess number.`);
-} else {
-  console.log(`${number} is not an excess number.`);
-}
+// --- #4 ---
+const circle = new Circle(10, 20, 5);
+console.log("Circle Area:", circle.square()); // 78.53981633974483
+const rectangle = new Rectangle(15, 25, 5, 10);
+console.log("Rectangle Area:", rectangle.square()); // 50

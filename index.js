@@ -1,62 +1,75 @@
 // --- #1 ---
-function sumBeforeMin(arr) {
-  if (arr.length === 0) return 0;
+function findCommonElements(array1, array2) {
+  const set1 = new Set(array1);
+  const set2 = new Set(array2);
+  const commonElements = [...set1].filter((item) => set2.has(item));
 
-  let minIndex = 0;
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] < arr[minIndex]) {
-      minIndex = i;
-    }
-  }
-
-  let sum = 0;
-  for (let i = 0; i < minIndex; i++) {
-    sum += arr[i];
-  }
-
-  return sum;
+  return commonElements;
 }
-const numbers = [3.5, 2.1, 4.7, 1.2, 5.6];
-console.log(sumBeforeMin(numbers)); // 10.3 (3.5 + 2.1 + 4.7)
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [4, 5, 6, 7, 8];
+console.log(findCommonElements(array1, array2)); // [4, 5]
 
 // --- #2 ---
-function minDiagonalSum(matrix) {
-  const numRows = matrix.length;
-  const numCols = matrix[0].length;
-  const diagonalSums = {};
+function countOccurrences(array) {
+  const occurrencesMap = new Map();
 
-  for (let col = 0; col < numCols; col++) {
-    let sum = 0;
-    for (let i = 0, j = col; i < numRows && j < numCols; i++, j++) {
-      sum += matrix[i][j];
-    }
-    diagonalSums[`0-${col}`] = sum;
-  }
-
-  for (let row = 1; row < numRows; row++) {
-    let sum = 0;
-    for (let i = row, j = 0; i < numRows && j < numCols; i++, j++) {
-      sum += matrix[i][j];
-    }
-    diagonalSums[`${row}-0`] = sum;
-  }
-
-  let minSum = Infinity;
-  for (const key in diagonalSums) {
-    if (diagonalSums[key] < minSum) {
-      minSum = diagonalSums[key];
+  for (const element of array) {
+    if (occurrencesMap.has(element)) {
+      occurrencesMap.set(element, occurrencesMap.get(element) + 1);
+    } else {
+      occurrencesMap.set(element, 1);
     }
   }
 
-  return minSum;
+  return occurrencesMap;
 }
 
-// Пример использования функции
-const matrix = [
-  [1.2, 2.3, 3.4],
-  [4.5, 5.6, 6.7],
-  [7.8, 8.9, 9.0],
-  [10.1, 11.2, 12.3],
+const array = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4];
+const occurrences = countOccurrences(array);
+occurrences.forEach((count, element) => {
+  console.log(`Element ${element} occurs ${count} times`);
+});
+
+// --- #3 ---
+class Student {
+  constructor(name, groupNumber) {
+    this.name = name;
+    this.groupNumber = groupNumber;
+  }
+}
+
+function countLargestGroup(students) {
+  const groupCounts = new Map();
+
+  for (const student of students) {
+    const group = student.groupNumber;
+    if (groupCounts.has(group)) {
+      groupCounts.set(group, groupCounts.get(group) + 1);
+    } else {
+      groupCounts.set(group, 1);
+    }
+  }
+
+  let maxCount = 0;
+  for (const count of groupCounts.values()) {
+    if (count > maxCount) {
+      maxCount = count;
+    }
+  }
+
+  return maxCount;
+}
+
+const students = [
+  new Student("Alice", "A1"),
+  new Student("Bob", "A1"),
+  new Student("Charlie", "B1"),
+  new Student("David", "A1"),
+  new Student("Eve", "B1"),
+  new Student("Frank", "B1"),
+  new Student("Grace", "C1"),
 ];
 
-console.log(minDiagonalSum(matrix));
+console.log(countLargestGroup(students)); // 3 (группа B1)

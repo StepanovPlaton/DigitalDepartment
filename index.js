@@ -1,50 +1,62 @@
 // --- #1 ---
-class Figure {
-  #x;
-  #y;
+function sumBeforeMin(arr) {
+  if (arr.length === 0) return 0;
 
-  constructor(x, y) {
-    this.#x = x;
-    this.#y = y;
+  let minIndex = 0;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < arr[minIndex]) {
+      minIndex = i;
+    }
   }
 
-  square() {
-    return undefined;
+  let sum = 0;
+  for (let i = 0; i < minIndex; i++) {
+    sum += arr[i];
   }
+
+  return sum;
 }
+const numbers = [3.5, 2.1, 4.7, 1.2, 5.6];
+console.log(sumBeforeMin(numbers)); // 10.3 (3.5 + 2.1 + 4.7)
 
 // --- #2 ---
-class Circle extends Figure {
-  #r;
+function minDiagonalSum(matrix) {
+  const numRows = matrix.length;
+  const numCols = matrix[0].length;
+  const diagonalSums = {};
 
-  constructor(x, y, r) {
-    super(x, y);
-    this.#r = r;
+  for (let col = 0; col < numCols; col++) {
+    let sum = 0;
+    for (let i = 0, j = col; i < numRows && j < numCols; i++, j++) {
+      sum += matrix[i][j];
+    }
+    diagonalSums[`0-${col}`] = sum;
   }
 
-  square() {
-    return Math.PI * this.#r * this.#r;
+  for (let row = 1; row < numRows; row++) {
+    let sum = 0;
+    for (let i = row, j = 0; i < numRows && j < numCols; i++, j++) {
+      sum += matrix[i][j];
+    }
+    diagonalSums[`${row}-0`] = sum;
   }
+
+  let minSum = Infinity;
+  for (const key in diagonalSums) {
+    if (diagonalSums[key] < minSum) {
+      minSum = diagonalSums[key];
+    }
+  }
+
+  return minSum;
 }
 
-// --- #3 ---
-class Rectangle extends Figure {
-  #h;
-  #w;
+// Пример использования функции
+const matrix = [
+  [1.2, 2.3, 3.4],
+  [4.5, 5.6, 6.7],
+  [7.8, 8.9, 9.0],
+  [10.1, 11.2, 12.3],
+];
 
-  constructor(x, y, h, w) {
-    super(x, y);
-    this.#h = h;
-    this.#w = w;
-  }
-
-  square() {
-    return this.#h * this.#w;
-  }
-}
-
-// --- #4 ---
-const circle = new Circle(10, 20, 5);
-console.log("Circle Area:", circle.square()); // 78.53981633974483
-const rectangle = new Rectangle(15, 25, 5, 10);
-console.log("Rectangle Area:", rectangle.square()); // 50
+console.log(minDiagonalSum(matrix));

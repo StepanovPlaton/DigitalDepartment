@@ -1,27 +1,53 @@
-function isExcess(number) {
-  if (number <= 0) {
-    return false;
+// --- #1 ---
+function productOfTwoMax(a, b, c) {
+  let max1, max2;
+
+  if (a >= b && a >= c) {
+    max1 = a;
+    max2 = Math.max(b, c);
+  } else if (b >= a && b >= c) {
+    max1 = b;
+    max2 = Math.max(a, c);
+  } else {
+    max1 = c;
+    max2 = Math.max(a, b);
   }
 
-  let divisorSum = 0;
-  for (let i = 1; i < number; i++) {
-    if (number % i === 0) {
-      divisorSum += i;
-    }
-  }
-
-  return divisorSum > number;
+  return max1 * max2;
 }
 
-const input = prompt("Enter a positive integer:");
-const number = parseInt(input, 10);
-if (isNaN(number) || number <= 0) {
-  console.log("Please enter a valid positive integer.");
-  return;
-}
+// Example usage:
+console.log(productOfTwoMax(3, 5, 2)); // Outputs: 15
+console.log(productOfTwoMax(7, 1, 4)); // Outputs: 28
 
-if (isExcess(number)) {
-  console.log(`${number} is an excess number.`);
-} else {
-  console.log(`${number} is not an excess number.`);
-}
+// --- #2 ---
+const introduce = (name, rank = "soldier") => `Name: ${name}, Rank: ${rank}`;
+
+// Example usage:
+console.log(introduce("Max", "admiral")); // Outputs: Name: Max, Звание: admiral
+console.log(introduce("Bob")); // Outputs: Name: Bob, Звание: soldier
+
+// --- #3 ---
+const executeFunction = (func, ...args) => func(...args);
+
+// Example usage:
+const add = (a, b) => a + b;
+const result = executeFunction(add, 5, 3);
+console.log(result); // Outputs: 8
+
+// --- #4 ---
+const getPowerFunction = (number) =>
+  number % 2 === 0 ? (n) => n ** 2 : (n) => n ** 3;
+
+// Example usage:
+const squareFunction = getPowerFunction(4);
+console.log(squareFunction(4)); // Outputs: 16
+const cubeFunction = getPowerFunction(3);
+console.log(cubeFunction(3)); // Outputs: 27
+
+// --- #5 ---
+const factorial = (n) => (n === 0 || n === 1 ? 1 : n * factorial(n - 1));
+
+// Example usage:
+console.log(factorial(5)); // Outputs: 120
+console.log(factorial(0)); // Outputs: 1
